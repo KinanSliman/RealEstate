@@ -1,0 +1,133 @@
+.hero{
+    position: relative;
+    transition: position 2s ease-in,height 2s ease-in;
+    img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+       // object-position: left right;
+        position: absolute;
+        z-index: -2;
+    }
+    .greyOverlayAboveHeroBackground{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient( rgba(15, 15, 15, 0.8),rgba(15, 15, 15, 0.6),rgba(15, 15, 15, 0.4)); /* Gradient overlay */
+        position: absolute;
+        z-index: -1;
+    }
+    &__content{
+        padding: 5.4rem 5.4rem 0rem 5.4rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        //justify-content: flex-start;
+        align-items: flex-start;
+        //border: 1px solid green;
+        @include smartphoneScreen(){
+            padding: 5.4rem 1.4rem 0rem 1.4rem;
+        }
+        .pOffer{
+            color: white;
+            font-size: 0.8rem;
+            width: 15rem;
+            text-align: center;
+            border: 1px solid white;
+            padding: 7px 2px;
+            font-family: Lato,Open Sans,sans-serif;
+            letter-spacing: 2px;
+            @include smartphoneScreen(){
+                padding: 5px 1px;
+                font-size: 0.7rem;
+                width: 12rem;
+            }
+            
+        }
+        h1{
+            margin-top: 1.5rem;
+            color: white;
+            font-weight: 400;
+            font-size: 2.6rem;
+            width: 35rem;
+            font-family: Lato,Open Sans,sans-serif;
+            @include tabletScreen(){
+                font-size: 1.8rem;
+                width: 25rem;
+            }
+            @include smartphoneScreen(){
+                font-size: 1.5rem;
+                width: 20rem;
+            }
+        }
+       
+        .pIntroduction{
+            text-align: justify;
+            margin-top: 2rem;
+            color: #fff;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 35.2px;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 2px rgba(0,0,0,.8),0 2px 10px rgba(0,0,0,.8);
+            font-family: Lato,Open Sans,sans-serif;
+            width: 60%;
+            letter-spacing: 1.2px;
+            @include tabletScreen(){
+                font-size: 1rem;
+                margin-top: 0.8rem;
+                margin-bottom: 0.8rem;
+                width: 82%;
+            }
+            @include smartphoneScreen(){
+                font-size: 0.9rem;
+                width: 90%;
+            }
+        }
+        button{
+            background-color: rgb(254, 255, 255);
+            align-items: center;
+            border-radius: 2px;
+            display: flex;
+            font-family: Lato,Open Sans,sans-serif;
+            font-size: 12px;
+            font-weight: 600 !important;
+            gap: 5px;
+            justify-content: center;
+            letter-spacing: 2px !important;
+            line-height: 24px;
+            padding: 11px 20px;
+            position: relative;
+            text-transform: uppercase;
+            transition: background-color .3s ease;
+            @include tabletScreen(){
+                font-size: 0.75rem;
+            }
+           
+        }
+        .cursor-blink::after {
+            content: "|";
+            display: inline-block;
+            animation: cursor-blink 0.5s infinite;
+          }
+          
+          @keyframes cursor-blink {
+            0%, 100% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0;
+            }
+          }
+    }
+  
+ 
+}
+
+.stickyHero{
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}

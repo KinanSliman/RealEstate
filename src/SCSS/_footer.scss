@@ -1,0 +1,92 @@
+.footer{
+    //margin-top: 5rem;
+    padding: 4rem;
+   // height: 80vh;
+    background-color: rgb(238, 238, 245);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    font-family: Lato,Open Sans,sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: 1px solid black;
+    @include tabletScreen(){
+        padding: 3rem 1rem 3rem 1rem;
+     }
+     @include smartphoneScreen(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+     }
+    .about{
+       // border: 1px solid green;
+        h3{
+            color: rgb(224, 113, 8);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            font-weight: 400;
+            @include tabletScreen(){
+                font-size: 0.9rem;
+            }
+            @include smartphoneScreen(){
+                width: 100%;
+                font-size: 1rem;
+                text-align: justify;
+                 }
+        }
+        p{
+            color: rgb(87, 77, 77);
+            text-align: justify;
+            width: 80%;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            font-weight: 200;
+            text-transform: none;
+            @include smartphoneScreen(){
+                width: 100%;
+                font-size: 1rem;
+                text-align: center;
+                 }
+        }
+    }
+    .links{
+       // border: 1px solid rgb(207, 221, 17);
+        h3{
+            color: rgb(36, 34, 32);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            font-weight: 400;
+            @include tabletScreen(){
+                font-size: 0.9rem;
+                font-weight: 400;
+            }
+        }
+        p{
+            color: rgb(87, 77, 77);
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            font-weight: 200;
+        }
+    }
+    .propertiesFooter{
+        //border: 1px solid rgb(243, 17, 111);
+        h3{
+            color: rgb(32, 36, 36);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            font-weight: 400;
+            @include tabletScreen(){
+                font-size: 0.9rem;
+                font-weight: 400;
+            }
+        }
+        p{
+            color: rgb(87, 77, 77);
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            font-weight: 200;
+        }
+    }   
+}

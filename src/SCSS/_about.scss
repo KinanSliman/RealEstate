@@ -1,0 +1,41 @@
+.aboutPage{
+   // margin-top: 5rem;
+    height: 100vh;
+    width: 100%;
+    font-family: Lato,Open Sans,sans-serif;
+    //padding-top: 5rem;
+    background-image: url('../assets/images/heroBackground.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+
+    h1{
+        padding-top: 3rem;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        color: rgb(250, 135, 3);
+        @include smallLaptopScreen(){
+            font-size: 2rem;
+        }
+    }
+    p{
+        margin-top: 2.2rem;
+        font-size: 2.2rem;
+        letter-spacing: 1.2px;
+        color: rgb(235, 228, 228);
+        text-align: justify;
+        width: 69%;
+        font-weight: 600;
+        background-color: rgba(7, 9, 105,0.1);
+        @include smallLaptopScreen(){
+            width: 75%;
+            font-size: 1.7rem;
+        }
+        @include tabletScreen(){
+            width: 85%;
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -1,0 +1,186 @@
+.navbar{
+    height: 5rem;
+    background-color: rgba(238, 205, 183, 0.096);
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    z-index: 10;
+    transition: top 0.1s ease-in, background-color 0.1s ease-in;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.4rem 0.5rem 2.4rem;
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        img{
+            height: 4.2rem;
+            width: auto;
+        }
+            p{
+                color: rgb(241, 121, 7);
+                font-family: Lato,Open Sans,sans-serif;
+                letter-spacing: 1.3px;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+    }
+   
+   ul{
+    display: flex;
+    @include tabletScreen(){
+        display: none;
+    }
+    li{
+        color:white;
+        margin-right: 2rem;
+        font-family: Lato,Open Sans,sans-serif;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        list-style-type: none;
+       // line-height: 30px;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+        @include smallLaptopScreen(){
+            margin-right: 1.5rem;
+        }
+    }
+   }
+
+   .humburger{
+    display: none;
+    @include tabletScreen(){
+        display: block;
+    }
+    .firstDiv{
+        position: relative;
+        width: 28px;
+        height: 2px;
+        background-color: rgb(245, 230, 27);
+        //transform-origin: 10px -5px;
+        transition: all 0.4s ease-in;
+        &.active{
+            transform: rotate(45deg);
+           
+          }
+    }
+    .secondDiv{
+        position: relative;
+        width: 28px;
+        height: 2px;
+        background-color: rgb(66, 255, 49);
+        margin-top: 4px;
+        transition: all 0.4s ease-in;
+        &.active{
+            opacity: 0;
+          }
+    }
+    .thirdDiv{
+        position: relative;
+        width: 28px;
+        height: 2px;
+        background-color: rgb(47, 235, 248);
+        margin-top: 4px;
+        transform-origin: 0px -5px;
+        transition: all 0.4s ease-in;
+        &.active{
+            transform: rotate(-45deg);
+            
+          }
+         
+    }
+   }
+
+    .NavbarHumburgerLinks{
+        position: absolute;
+        right:0px;
+        top: 80px;
+       // inset: 0;
+       // margin: auto;
+        width: 70%;
+        //height: 40rem;
+        display: none;
+        transition: all 2s ease-in;
+        &.active{
+            display: block;
+        }
+       
+        ul{
+            height: 100vh;
+            display: block;
+            //border: 1px solid magenta;
+            padding: 1rem;
+            background-color: rgb(24, 24, 21);
+            li{
+                text-align: left;
+               padding: 0.5rem;
+                margin-bottom: 0.3rem;
+            }
+        }
+       }
+  
+   .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    p{
+        color: white;
+        text-align: center;
+        font-weight: 200;
+        font-family: Lato,Open Sans,sans-serif;
+        text-transform: uppercase;
+        //font-size: 0.72rem;
+        font-size: 14px;
+        letter-spacing: 2px;
+        //border: 1px solid greenyellow;
+    
+        &::before {
+            content: ""; /* Necessary for ::before to work */
+            display: inline-block; /* Changed to inline-block */
+            background-image: url("../assets/images/WhatsAppIcon.png");
+            background-size: contain; /* Adjust as needed */
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 13px;
+            /* Other background properties like position, size, repeat, etc. */
+          }
+          
+       }
+       button{
+        //padding:1rem;
+        background-color: rgb(254, 255, 255);
+        font-size: 0.75rem;
+        font-family: Lato,Open Sans,sans-serif;
+        font-weight: 600;
+        line-height: 24px;
+        border: none;
+        padding: 0.7rem 1.2rem;
+        letter-spacing: 2px ;
+        display: none;
+       }
+       @include tabletScreen(){
+        display: none;
+    }
+   }
+
+}
+.sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 10; /* Adjust z-index as needed */
+    background-color: rgba(17, 16, 16, 0.916);
+  
+  }
+
+  
+
+ 
+
+ 
