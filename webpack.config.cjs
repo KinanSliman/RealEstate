@@ -1,7 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/main.jsx", // Adjust the entry point to your main file
+  mode: "production", // Set mode to production
+  entry: "./src/main.jsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -25,15 +26,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|webp)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "images/",
-            },
-          },
-        ],
+        type: "asset/resource",
       },
     ],
   },
@@ -46,5 +39,4 @@ module.exports = {
     port: 9000,
     historyApiFallback: true,
   },
-  mode: "development", // You can set this to 'production' as needed
 };
