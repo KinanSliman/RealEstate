@@ -10,7 +10,7 @@ function Categories() {
       <div className="categories">
         <div className="category">
           <div className="imageContainer">
-            <img src={OffPlanImage} alt="category" loading="lazy" />
+            <img src={OffPlanImage} alt="category" />
           </div>
 
           <h1>Off Plan</h1>
@@ -19,7 +19,7 @@ function Categories() {
 
         <div className="category">
           <div className="imageContainer">
-            <img src={BuyImage} alt="category" loading="lazy" />
+            <img src={BuyImage} alt="category" />
           </div>
           <h1>Buy</h1>
           <p>Find your dream home in a ready property</p>
@@ -27,7 +27,7 @@ function Categories() {
 
         <div className="category">
           <div className="imageContainer">
-            <img src={RentImage} alt="category" loading="lazy" />
+            <img src={RentImage} alt="category" />
           </div>
           <h1>Rent</h1>
           <p>Discover Your Ideal Rental Home</p>
@@ -35,7 +35,7 @@ function Categories() {
 
         <div className="category">
           <div className="imageContainer">
-            <img src={CommercialImage} alt="category" loading="lazy" />
+            <img src={CommercialImage} alt="category" />
           </div>
           <h1>Commercial</h1>
           <p>Explore your Business Spaces</p>
