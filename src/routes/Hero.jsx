@@ -57,9 +57,9 @@ function Hero() {
         <p className="pOffer">Just 10% for 12 months</p>
         <h1></h1>
         <p className="pIntroduction">
-          Experience the epitome of opulence at our premier properties. Book now
-          to claim your haven of elevated living, where every moment is infused
-          with luxury and comfort.
+          Discover unparalleled luxury at our exquisite properties. Secure your
+          sanctuary of sophisticated living today, where every detail is crafted
+          to offer you the ultimate in elegance and comfort.
         </p>
         <button> Learn More</button>
         <Filter />
