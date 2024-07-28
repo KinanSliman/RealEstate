@@ -1,23 +1,19 @@
 const path = require("path");
 
 module.exports = {
-  mode: "production", // Set mode to production
   entry: "./src/main.jsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "/", // Add this line to ensure that all assets are served from the root
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-react"],
-          },
         },
       },
       {
@@ -25,8 +21,15 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|webp)$/,
-        type: "asset/resource",
+        test: /\.(png|jpg|gif|webp)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
@@ -37,6 +40,6 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
-    historyApiFallback: true,
+    historyApiFallback: true, // This ensures index.html is served for all routes
   },
 };
