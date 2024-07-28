@@ -13,7 +13,9 @@ export const PropertiesProvider = ({ children }) => {
       setError(null);
 
       try {
-        const response = await fetch("http://localhost:3000/api/properties");
+        const response = await fetch(
+          "https://realestate-8mpv.onrender.com/api/properties"
+        );
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
