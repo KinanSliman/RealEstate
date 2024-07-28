@@ -1,11 +1,12 @@
 const path = require("path");
 
 module.exports = {
+  mode: "development", // or "production"
   entry: "./src/main.jsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/", // Add this line to ensure that all assets are served from the root
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -14,6 +15,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
         },
       },
       {
@@ -40,6 +44,6 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
-    historyApiFallback: true, // This ensures index.html is served for all routes
+    historyApiFallback: true,
   },
 };
