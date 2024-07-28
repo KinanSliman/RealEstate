@@ -3,7 +3,7 @@ export default function ResultProperty({ property }) {
     <div className="resultPage">
       <div className="propertyResult">
         <div className="propertyResult__image">
-          <img src={property.image} alt="an image" />
+          <img src={property.image} alt="an image" loading="lazy" />
         </div>
         <div className="propertyResult__description">
           <p> {property.location}</p>

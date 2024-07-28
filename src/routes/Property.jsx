@@ -8,17 +8,17 @@ function Property() {
       <h3 className="propertiesHeading">All types of properties</h3>
       <div className="properties">
         <div className="property firstImage">
-          <img src={OfficeImage} alt="office" />
+          <img src={OfficeImage} alt="office" loading="lazy" />
           <p>office</p>
         </div>
 
         <div className="property secondImage">
-          <img src={LocationImage} alt="location" />
+          <img src={LocationImage} alt="location" loading="lazy" />
           <p>Apartment</p>
         </div>
 
         <div className="property thirdImage">
-          <img src={LandImage} alt="land" />
+          <img src={LandImage} alt="land" loading="lazy" />
           <p>Villa</p>
         </div>
       </div>
