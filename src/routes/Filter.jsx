@@ -49,7 +49,7 @@ function Filter({ logFilters, clearFilters }) {
           className="propertyTypeFilterWrapper"
           onClick={togglePropertyTypes}
         >
-          <h4>Filter By Type</h4>
+          <h4>Filter Type</h4>
           <div
             className={`propertyTypeFilterContainerForCheckboxes ${
               isCollapsed ? "PropertyTypesVisibleCheckboxes" : ""
