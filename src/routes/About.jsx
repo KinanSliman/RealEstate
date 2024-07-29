@@ -10,11 +10,11 @@ export default function About() {
       <div className="aboutPage">
         <h1>Charizrad Properties</h1>
         <p>
-          Charizard Properties is a showcase project in my web development
-          portfolio. It demonstrates my expertise in building real-world
-          applications using React.js (including useState, useEffect, useRef,
-          and React Router) for the frontend. The backend is powered by an
-          Express server with Node.js, and data is managed using MongoDB.
+          Real Estate is a showcase project in my web development portfolio. It
+          demonstrates my expertise in building real-world applications using
+          React.js (including useState, useEffect, useRef, and React Router) for
+          the frontend. The backend is powered by an Express server with
+          Node.js, and data is managed using MongoDB.
         </p>
       </div>
       <Footer />

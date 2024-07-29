@@ -19,6 +19,9 @@
         @include smallLaptopScreen(){
             font-size: 2rem;
         }
+        @include smartphoneScreen(){
+            font-size: 1.4rem;
+        }
     }
     p{
         margin-top: 2.2rem;
@@ -36,6 +39,9 @@
         @include tabletScreen(){
             width: 85%;
             font-size: 1.3rem;
+        }
+        @include smartphoneScreen(){
+            font-size: 1rem;
         }
     }
 }

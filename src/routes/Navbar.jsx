@@ -35,7 +35,7 @@ function Navbar({ isNavbarStickyStyleApplied }) {
     <div className={`navbar ${isSticky ? "sticky" : ""}`}>
       <div className="logo">
         <img src={logo} alt="logo" />
-        <p>Charizard Properties</p>
+        <p>Real Estate</p>
       </div>
 
       <ul>

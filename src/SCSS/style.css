@@ -391,12 +391,12 @@ a {
   display: none;
   position: absolute;
   z-index: 10;
-  top: 35px;
-  right: -80px;
+  top: 28px;
+  left: 0px;
   border: 1px solid rgb(99, 109, 99);
   border-radius: 5px;
-  padding: 2rem;
-  width: 20rem;
+  padding: 1rem;
+  width: 14rem;
   background-color: rgb(238, 243, 243);
 }
 .filter__parameters .propertyTypeFilterWrapper .propertyTypeFilterContainerForCheckboxes input {
@@ -412,16 +412,6 @@ a {
 @media screen and (max-width: 550px) {
   .filter__parameters .propertyTypeFilterWrapper .propertyTypeFilterContainerForCheckboxes label {
     font-size: 0.75rem;
-  }
-}
-@media screen and (max-width: 550px) {
-  .filter__parameters .propertyTypeFilterWrapper .propertyTypeFilterContainerForCheckboxes {
-    top: 28px;
-    right: -90px;
-    border: 1px solid rgb(99, 109, 99);
-    border-radius: 5px;
-    padding: 1rem;
-    width: 14rem;
   }
 }
 .filter button {
@@ -834,6 +824,11 @@ a {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 550px) {
+  .aboutPage h1 {
+    font-size: 1.4rem;
+  }
+}
 .aboutPage p {
   margin-top: 2.2rem;
   font-size: 2.2rem;
@@ -856,6 +851,24 @@ a {
     font-size: 1.3rem;
   }
 }
+@media screen and (max-width: 550px) {
+  .aboutPage p {
+    font-size: 1rem;
+  }
+}
+
+.ResultsFoundHeader {
+  color: rgb(78, 67, 67);
+  text-align: left;
+  margin: 1rem;
+  font-size: 2rem;
+}
+@media screen and (max-width: 550px) {
+  .ResultsFoundHeader {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+}
 
 .resultPage {
   margin-top: 2rem;
@@ -874,6 +887,12 @@ a {
   display: flex;
   align-items: center;
   gap: 0;
+}
+@media screen and (max-width: 550px) {
+  .resultPage .propertyResult {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .resultPage .propertyResult__image {
   width: 36rem;

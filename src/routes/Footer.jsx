@@ -2,7 +2,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="about">
-        <h3> Charizard Properties</h3>
+        <h3> Real Estate</h3>
         <p>
           This is my React JS website, it is not an actual website, please see
           about us page to learn more!

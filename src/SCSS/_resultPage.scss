@@ -1,3 +1,14 @@
+.ResultsFoundHeader{
+    color: rgb(78, 67, 67);
+    text-align: left;
+    margin: 1rem;
+    font-size: 2rem;
+    @include smartphoneScreen(){
+        text-align: left;
+        font-size: 1.2rem;
+    }
+}
+
 .resultPage{
    // position: absolute;
    margin-top: 2rem;
@@ -18,7 +29,10 @@
         align-items: center;
         gap: 0;
        // border: 1px solid magenta;
-     
+       @include smartphoneScreen(){
+        flex-direction: column;
+        justify-content: center;
+    }
         &__image{
             width: 36rem;
             height: 25rem;
