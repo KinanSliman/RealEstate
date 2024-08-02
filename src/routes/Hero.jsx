@@ -1,21 +1,20 @@
 import heroBackgroundImage from "../assets/images/heroBackground.jpg";
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Filter from "./Filter";
+import { useFilter } from "./FilterProvider";
 
 function Hero() {
   const [isStickyHero, setIsStickyHero] = useState(false);
   const containerRef = useRef(null);
+  const { initialPriceRange, logFilters, clearFilters } = useFilter();
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 2) {
-      setIsStickyHero(true);
-    } else {
-      setIsStickyHero(false);
-    }
+    setIsStickyHero(offset > 2);
   };
 
-  // Typing effect function
   const typingEffect = (element, text, speed) => {
     let i = 0;
     const startEffect = setInterval(() => {
@@ -28,7 +27,6 @@ function Hero() {
     }, speed);
   };
 
-  // Hook to add/remove scroll event listener
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -36,7 +34,6 @@ function Hero() {
     };
   }, []);
 
-  // Hook to apply typing effect
   useEffect(() => {
     if (containerRef.current) {
       const heading = containerRef.current.querySelector("h1");
@@ -48,6 +45,10 @@ function Hero() {
       }
     }
   }, [containerRef]);
+
+  const handleApplyFilters = () => {
+    navigate("/properties-page");
+  };
 
   return (
     <div className={`hero ${isStickyHero ? "stickyHero" : ""}`}>
@@ -62,7 +63,12 @@ function Hero() {
           to offer you the ultimate in elegance and comfort.
         </p>
         <button> Learn More</button>
-        <Filter />
+        <Filter
+          logFilters={logFilters}
+          clearFilters={clearFilters}
+          initialPriceRange={initialPriceRange}
+          onApplyFilters={handleApplyFilters}
+        />
       </div>
     </div>
   );

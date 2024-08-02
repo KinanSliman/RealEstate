@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Price from "./Price";
 
-function Filter({ logFilters, clearFilters }) {
+function Filter({
+  logFilters,
+  clearFilters,
+  initialPriceRange,
+  onApplyFilters,
+}) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({
     apartment: false,
     villa: false,
     house: false,
   });
+
+  const [priceRange, setPriceRange] = useState(initialPriceRange);
+  const [propertyOption, setPropertyOption] = useState("");
+
+  useEffect(() => {
+    setPriceRange(initialPriceRange);
+  }, [initialPriceRange]);
+
+  const handlePriceChange = (newValues) => {
+    setPriceRange(newValues);
+  };
 
   const togglePropertyTypes = () => {
     setIsCollapsed(!isCollapsed);
@@ -20,11 +37,23 @@ function Filter({ logFilters, clearFilters }) {
     }));
   };
 
+  const handlePropertyOptionClick = (option) => {
+    setPropertyOption(option);
+  };
+
   const handleSearch = () => {
-    logFilters(
-      Object.keys(selectedFilters).filter((key) => selectedFilters[key])
-    );
+    const activeFilters = {
+      propertyTypes: Object.keys(selectedFilters).filter(
+        (key) => selectedFilters[key]
+      ),
+      priceRange,
+      propertyOption,
+    };
+    logFilters(activeFilters);
     setIsCollapsed(false);
+    if (onApplyFilters) {
+      onApplyFilters();
+    }
   };
 
   const handleClearFilters = () => {
@@ -33,23 +62,20 @@ function Filter({ logFilters, clearFilters }) {
       villa: false,
       house: false,
     });
+    setPriceRange(initialPriceRange);
+    setPropertyOption("");
     clearFilters();
     setIsCollapsed(false);
   };
 
   return (
     <div className="filter">
-      <div className="filter__propertyType">
-        <p>Buy</p>
-        <p>Rent</p>
-        <p>Off plan</p>
-      </div>
       <div className="filter__parameters">
         <div
           className="propertyTypeFilterWrapper"
           onClick={togglePropertyTypes}
         >
-          <h4>Filter Type</h4>
+          <h4>Filters</h4>
           <div
             className={`propertyTypeFilterContainerForCheckboxes ${
               isCollapsed ? "PropertyTypesVisibleCheckboxes" : ""
@@ -81,6 +107,22 @@ function Filter({ logFilters, clearFilters }) {
               onChange={handleCheckboxChange}
             />
             <label htmlFor="house">house</label>
+
+            <div className="propertyOptions">
+              <button onClick={() => handlePropertyOptionClick("buy")}>
+                buy
+              </button>
+              <button onClick={() => handlePropertyOptionClick("rent")}>
+                rent
+              </button>
+              <button onClick={() => handlePropertyOptionClick("offPlan")}>
+                off plan
+              </button>
+            </div>
+            <Price
+              initialPriceRange={priceRange}
+              onPriceChange={handlePriceChange}
+            />
           </div>
         </div>
       </div>

@@ -42,14 +42,9 @@ function Navbar({ isNavbarStickyStyleApplied }) {
         <li>
           <Link to="/">Home</Link>
         </li>
+
         <li>
-          <Link to="/offplan-page"> Off Plan</Link>
-        </li>
-        <li>
-          <Link to="/buy-page"> Buy</Link>
-        </li>
-        <li>
-          <Link to="/rent-page">Rent</Link>
+          <Link to="/properties-page">Properties</Link>
         </li>
         <li>
           <Link to="/about-us">About Us</Link>
@@ -64,13 +59,7 @@ function Navbar({ isNavbarStickyStyleApplied }) {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/offplan-page"> Off Plan</Link>
-          </li>
-          <li>
-            <Link to="/buy-page"> Buy</Link>
-          </li>
-          <li>
-            <Link to="/rent-page">Rent</Link>
+            <Link to="/properties-page">Rent</Link>
           </li>
           <li>
             <Link to="/about-us">About Us</Link>
