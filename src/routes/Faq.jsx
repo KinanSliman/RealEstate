@@ -28,11 +28,13 @@ function Faq() {
       <div className="faq__content">
         <h1>Answers To Your Questions</h1>
         <p>
-          Get to know everything about Premier Assets and our service by going
-          through our FAQ section, Whether you are interested in our properties
-          viewing registrations, want to grasp what we offer, or simply vivid
-          the difference between our agency and others, our FAQs have the
-          answers that you desire.
+          Welcome to our FAQ section! Here, we've compiled answers to the most
+          common questions our clients ask. Whether you're buying, selling, or
+          renting a property, we understand that you might have some queries.
+          Our goal is to provide you with clear, concise, and helpful
+          information to make your real estate journey as smooth as possible. If
+          you can't find the answer you're looking for, feel free to reach out
+          to our team for personalized assistance.
         </p>
       </div>
       <div className="faq__questions">

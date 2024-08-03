@@ -829,7 +829,7 @@ a {
   height: 100vh;
   width: 100%;
   font-family: Lato, Open Sans, sans-serif;
-  background-image: url("../assets/images/heroBackground.jpg");
+  background-image: url("../assets/images/aboutPageBackground.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -859,7 +859,6 @@ a {
   text-align: justify;
   width: 69%;
   font-weight: 600;
-  background-color: rgba(7, 9, 105, 0.1);
 }
 @media screen and (max-width: 1060px) {
   .aboutPage p {
